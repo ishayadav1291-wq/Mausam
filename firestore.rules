@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Saved locations for personalized map markers
+    match /savedLocations/{locationId} {
+      allow read, write: if true;
+    }
+
+    // User preferences & alert configuration
+    match /userPreferences/{userId} {
+      allow read, write: if true;
+    }
+  }
+}

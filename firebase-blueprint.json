@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "savedLocation": {
+      "title": "Saved Location",
+      "description": "User's personalized saved place such as Home, College, Office, or Vacation Destination with coordinates and custom marker metadata",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "cityName": { "type": "string" },
+        "lat": { "type": "number" },
+        "lon": { "type": "number" },
+        "category": { "type": "string", "enum": ["home", "college", "office", "travel", "gym", "park", "custom"] },
+        "icon": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "label", "cityName", "lat", "lon", "category"]
+    },
+    "userPreference": {
+      "title": "User Preferences",
+      "description": "User settings such as selected personas, language, and notification toggles",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "language": { "type": "string" },
+        "selectedPersonas": { "type": "array" },
+        "severeWeatherAlerts": { "type": "boolean" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "language"]
+    }
+  },
+  "firestore": {
+    "/savedLocations/{locationId}": {
+      "schema": "savedLocation",
+      "description": "Collection of user's saved important places and coordinates for map markers"
+    },
+    "/userPreferences/{userId}": {
+      "schema": "userPreference",
+      "description": "Collection of user preferences and notification settings"
+    }
+  }
+}

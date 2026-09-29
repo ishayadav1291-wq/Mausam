@@ -1,0 +1,6 @@
+{
+  "name": "Mausam - Personalized Weather",
+  "description": "Intelligent, persona-driven weather insights for health, fitness, beachgoers, commuters, parents, agriculture, travel, and events with multi-language support.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
