@@ -98,8 +98,7 @@ Generic weather apps show numbers; Mausam provides contextual decisions:
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v20.x or higher recommended)
-- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
-- A [Google AI Studio API Key](https://aistudio.google.com/)
+- [npm](https://www.npmjs.com/) 
 
 ### Installation
 
